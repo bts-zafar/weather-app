@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from "react";
 const api = {
   key: "0d4362ae2e2fcaf3e8af9e9908baec67",
-  base: "http://api.openweathermap.org/data/2.5/"
+  base: "https://api.openweathermap.org/data/2.5/"
 } 
 function App() {
   const [query, setQuery] = useState('');
@@ -51,7 +51,7 @@ function App() {
           <div className="weather-box">
           <div className="temp">{Math.round(weather.main.temp)}°C</div>
           <div className="weather">{weather.weather[0].description}</div>
-         <div className="icon"><img src={`http://openweathermap.org/img/w/${weather.weather[0].icon}.png`}  alt="weather"/></div>
+         <div className="icon"><img src={`https://openweathermap.org/img/w/${weather.weather[0].icon}.png`}  alt="weather"/></div>
         </div>
         </div>
         ) : ('')}
